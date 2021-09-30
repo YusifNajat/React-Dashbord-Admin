@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import  './Sidebar.css';
 import  { 
   LineStyle, 
@@ -43,10 +45,12 @@ function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <PersonOutline className="sidebarIcon"/>
-              Users
-            </li>
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PersonOutline className="sidebarIcon"/>
+                Users
+              </li>
+            </Link>
 
             <li className="sidebarListItem">
               <Store className="sidebarIcon"/>
