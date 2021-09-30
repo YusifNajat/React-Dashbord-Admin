@@ -51,11 +51,12 @@ function Sidebar() {
                 Users
               </li>
             </Link>
-
-            <li className="sidebarListItem">
-              <Store className="sidebarIcon"/>
-              Products
-            </li>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Store className="sidebarIcon"/>
+                Products
+              </li>
+            </Link>
 
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon"/>
