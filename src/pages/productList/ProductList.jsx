@@ -13,29 +13,29 @@ export default function ProductList() {
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "id", headerName: "ID", width: 100 },
     {
-      field: "product",
-      headerName: "Product",
+      field: "username",
+      headerName: "Title",
       width: 200,
-      renderCell: (params) => {
-        return (
-          <div className="productListItem">
-            <img className="productListImg" src={params.row.img} alt="" />
-            {params.row.name}
-          </div>
-        );
-      },
+      // renderCell: (params) => {
+      //   return (
+      //     <div className="productListItem">
+      //       <img className="productListImg" src={params.row.img} alt="" />
+      //       {params.row.name}
+      //     </div>
+      //   );
+      // },
     },
-    { field: "stock", headerName: "Stock", width: 200 },
+    { field: "email", headerName: "University", width: 200 },
     {
       field: "status",
-      headerName: "Status",
-      width: 120,
+      headerName: "College",
+      width: 160,
     },
     {
-      field: "price",
-      headerName: "Price",
+      field: "transaction",
+      headerName: "Department",
       width: 160,
     },
     {
@@ -46,7 +46,7 @@ export default function ProductList() {
         return (
           <>
             <Link to={"/product/" + params.row.id}>
-              <button className="productListEdit">Edit</button>
+              <button className="productListEdit">View</button>
             </Link>
             <DeleteOutline
               className="productListDelete"
@@ -60,6 +60,7 @@ export default function ProductList() {
 
   return (
     <div className="productList">
+      <h1 style={{color:"red",marginBottom:"10px",marginLeft:"20px"}}>List Answers:</h1>
       <DataGrid
         rows={data}
         disableSelectionOnClick
