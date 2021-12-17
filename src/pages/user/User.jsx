@@ -14,6 +14,12 @@ export default function User() {
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
+<<<<<<< HEAD
+=======
+        <Link to="/new-user">
+          <button className="userAddButton">Create</button>
+        </Link>
+>>>>>>> 849982f13b5bab88150f3a44615444463147add9
       </div>
       <div className="userContainer">
         <div className="userShow">
