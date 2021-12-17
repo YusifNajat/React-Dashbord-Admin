@@ -101,6 +101,7 @@ componentDidMount() {
     {
      R_fullname: data.fname,
      R_email: data.lname,
+     Auth:true
     },
     () => {
      // this.All_shops("Men")
@@ -176,6 +177,7 @@ componentDidMount() {
       Register:this.Register,
       Login:this.Login,
       GetUser_Login:this.GetUser_Login,
+      LogOut_User:this.LogOut_User,
      }}
     >
      {this.props.children}
