@@ -13,29 +13,29 @@ export default function UserList() {
   };
   
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "id", headerName: "ID", width: 100 },
     {
-      field: "user",
-      headerName: "User",
+      field: "username",
+      headerName: "Title",
       width: 200,
-      renderCell: (params) => {
-        return (
-          <div className="userListUser">
-            <img className="userListImg" src={params.row.avatar} alt="" />
-            {params.row.username}
-          </div>
-        );
-      },
+      // renderCell: (params) => {
+      //   return (
+      //     <div className="userListUser">
+      //       <img className="userListImg" src={params.row.avatar} alt="" />
+      //       {params.row.username}
+      //     </div>
+      //   );
+      // },
     },
-    { field: "email", headerName: "Email", width: 200 },
+    { field: "email", headerName: "University", width: 200 },
     {
       field: "status",
-      headerName: "Status",
-      width: 120,
+      headerName: "College",
+      width: 160,
     },
     {
       field: "transaction",
-      headerName: "Transaction Volume",
+      headerName: "Department",
       width: 160,
     },
     {
@@ -46,7 +46,7 @@ export default function UserList() {
         return (
           <>
             <Link to={"/user/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+              <button className="userListEdit">View</button>
             </Link>
             <DeleteOutline
               className="userListDelete"
@@ -59,7 +59,16 @@ export default function UserList() {
   ];
 
   return (
+    <>
     <div className="userList">
+    <br/>
+    <br/>
+<div className=""style={{textAlign:"right",marginRight:"50px"}}>
+<Link to="/newUser">
+          <button className="userAddButton">Create Problem</button>
+        </Link>
+</div>
+<h1 style={{color:"red",marginBottom:"10px",marginLeft:"20px"}}>List Problmes:</h1>
       <DataGrid
         rows={data}
         disableSelectionOnClick
@@ -68,5 +77,6 @@ export default function UserList() {
         checkboxSelection
       />
     </div>
-  );
+  </>
+    );
 }
