@@ -14,9 +14,6 @@ export default function User() {
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
-        <Link to="/newUser">
-          <button className="userAddButton">Create</button>
-        </Link>
       </div>
       <div className="userContainer">
         <div className="userShow">
@@ -60,8 +57,8 @@ export default function User() {
           <span className="userUpdateTitle">Edit</span>
           <form className="userUpdateForm">
             <div className="userUpdateLeft">
-              <div className="userUpdateItem">
-                <label>Username</label>
+            <div className="userUpdateItem">
+                <label>Title</label>
                 <input
                   type="text"
                   placeholder="annabeck99"
@@ -69,7 +66,15 @@ export default function User() {
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Full Name</label>
+                <label>University</label>
+                <input
+                  type="text"
+                  placeholder="annabeck99"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdateItem">
+                <label>College</label>
                 <input
                   type="text"
                   placeholder="Anna Becker"
@@ -77,7 +82,7 @@ export default function User() {
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Email</label>
+                <label>Departent</label>
                 <input
                   type="text"
                   placeholder="annabeck99@gmail.com"
@@ -85,23 +90,13 @@ export default function User() {
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Phone</label>
-                <input
-                  type="text"
-                  placeholder="+1 123 456 67"
-                  className="userUpdateInput"
-                />
-              </div>
-              <div className="userUpdateItem">
-                <label>Address</label>
-                <input
-                  type="text"
+                <label>Problem</label>
+               <textarea 
                   placeholder="New York | USA"
-                  className="userUpdateInput"
-                />
+                  className="" style={{borderTop:"none",borderRight:"none",borderLeft:"none"}} cols="9" rows="6" ></textarea>
               </div>
             </div>
-            <div className="userUpdateRight">
+            {/* <div className="userUpdateRight">
               <div className="userUpdateUpload">
                 <img
                   className="userUpdateImg"
@@ -113,8 +108,8 @@ export default function User() {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
-              <button className="userUpdateButton">Update</button>
-            </div>
+              <button className="userUpdateButton">Sent</button>
+            </div> */}
           </form>
         </div>
       </div>
