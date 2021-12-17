@@ -57,13 +57,13 @@ const LoginForm = () => {
                 <label for="password">Password</label>
                </div>
                <input type="password" className="input" name="L_password" value={L_password} onChange={OnChange_Handler} />
-              </div>
+              </div>   
               <div class="field padding-bottom--24">
                <Link to="/dashboard" onClick={Login}>
                 {" "}
                 <input
                  type="submit"
-                 className="input"
+                 className="input"   
                 />
                </Link>
               </div>
